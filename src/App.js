@@ -1,19 +1,35 @@
 import React, { useState } from 'react';
+import Tasks from './components/Tasks';
+import './App.css';
 
-import './App.css'
 const App = () => {
   // let [message = 'Hello World!'
   //diferently de
-  const [message, setMessage] = useState("click to test");
- // useState() returns a state, the initial value goes between ()
-// 1st argument: the state itself
-// 2nd argument: the function which update the state //
+  const [tasks, setTasks] = useState([
+    {
+      id: "1",
+      title: "Study React",
+      completed: false,
+    },
+    {
+      id: "2",
+      title: "Read books",
+      completed: true,
+    },
+    {
+      id: "3",
+      title: "Apply for jobs",
+      completed: true,
+    },
+  ]);
+  // useState() returns a state, the initial value goes between ()
+  // 1st argument: the state itself
+  // 2nd argument: the function which update the state //
   return (
     <>
-      <div className="container">{message}</div>
-      <button onClick={() => setMessage("test successful")}>
-        click to change message
-      </button>
+      <div className="container">
+        <Tasks tasks={tasks} />
+      </div>
     </>
   );
 };
