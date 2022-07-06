@@ -1,5 +1,5 @@
 import React from 'react';
-
+// imr - type for shortcut
 import "./Task.css";
 
 const Task = ({task}) => {
