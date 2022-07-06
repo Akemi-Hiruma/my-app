@@ -28,9 +28,9 @@ const App = () => {
     const newTasks = [
       ...tasks,
       {
-        title: taskTitle;
-        id: Math.random(10);
-        completed: false;
+        title: taskTitle,
+        id: Math.random(10),
+        completed: false,
       },
     ];
 
