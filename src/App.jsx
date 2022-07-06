@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Tasks from './components/Tasks';
+import AddTask from './components/AddTask';
 import './App.css';
 
 const App = () => {
@@ -22,12 +23,27 @@ const App = () => {
       completed: true,
     },
   ]);
+
+  const handleTaskAddition = (taskTitle) => {
+    const newTasks = [
+      ...tasks,
+      {
+        title: taskTitle,
+        id: Math.random(10),
+        completed: false,
+      },
+    ];
+
+    setTasks(newTasks);
+  };
+
   // useState() returns a state, the initial value goes between ()
   // 1st argument: the state itself
   // 2nd argument: the function which update the state //
   return (
     <>
       <div className="container">
+        <AddTask />
         <Tasks tasks={tasks} />
       </div>
     </>
