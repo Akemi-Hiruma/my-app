@@ -1,11 +1,12 @@
-import React from 'react';
 import { useState } from 'react';
 
-import "./AddTask.css";
 import Button from './Button';
+
+import "./AddTask.css";
 
 const AddTask = ({ handleTaskAddition }) => {
   const [inputData, setInputData] = useState('')
+
   const handleInputChange = (e) => {
     // handle is a convention on react for functions passed to onChange (it 'handles' the changes that onChange will be submited)
     setInputData(e.target.value);
@@ -13,7 +14,7 @@ const AddTask = ({ handleTaskAddition }) => {
   };
 
   const handleAddTaskClick = () => {
-    handleTaskAddition(inputData);
+    handleTaskAddition(inputData)
   };
 
   return (
@@ -23,9 +24,11 @@ const AddTask = ({ handleTaskAddition }) => {
           value={inputData}
           // onChange is a property of input, which is executed whenever the input value is changed
           className="add-task-input"
-          type="text" />
-        <div className="add-task-button-container"></div>
-        <Button>Add</Button>
+          type="text"
+        />
+        <div className="add-task-button-container">
+          <Button onClick={handleAddTaskClick}>Add</Button>
+        </div>
       </div>
     );
 };

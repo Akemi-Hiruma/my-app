@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import Tasks from './components/Tasks';
 import AddTask from './components/AddTask';
 import './App.css';
@@ -26,8 +27,7 @@ const App = () => {
 
   const handleTaskAddition = (taskTitle) => {
     const newTasks = [
-      ...tasks,
-      {
+      ...tasks, {
         title: taskTitle,
         id: Math.random(10),
         completed: false,
@@ -43,7 +43,7 @@ const App = () => {
   return (
     <>
       <div className="container">
-        <AddTask />
+        <AddTask handleTaskAddition={handleTaskAddition} />
         <Tasks tasks={tasks} />
       </div>
     </>
@@ -54,4 +54,4 @@ const App = () => {
     //     <h1>hello world!</h1>
     //   )
     //
-export default App
+export default App;
