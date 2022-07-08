@@ -6,7 +6,6 @@ import './App.css';
 
 const App = () => {
   // let [message = 'Hello World!'
-  //diferently de
   const [tasks, setTasks] = useState([
     {
       id: "1",
@@ -24,6 +23,18 @@ const App = () => {
       completed: true,
     },
   ]);
+
+  const handleTaskClick = (taskId) => {
+    const newTasks = tasks.map((task)=> {
+      if (task.id === taskId) return { ...task, completed: !task.completed }
+
+      return task;
+    });
+
+    setTasks(newTasks)
+  };
+
+
 
   const handleTaskAddition = (taskTitle) => {
     const newTasks = [
@@ -44,7 +55,7 @@ const App = () => {
     <>
       <div className="container">
         <AddTask handleTaskAddition={handleTaskAddition} />
-        <Tasks tasks={tasks} />
+        <Tasks tasks={tasks} handleTaskClick={handleTaskClick} />
       </div>
     </>
   );
