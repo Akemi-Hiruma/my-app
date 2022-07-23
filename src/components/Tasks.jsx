@@ -3,7 +3,7 @@ import React from "react";
 import Task from "./Task";
 
 const Tasks = ( {tasks, handleTaskClick, handleTaskDeletion} ) => {
-//  tasks estão dentro do objeto prop
+//  tasks are inside of prop object
   return (
     <>
       {tasks.map((task) => (
