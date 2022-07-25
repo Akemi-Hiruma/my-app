@@ -1,13 +1,13 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-
+// hook
 import Button from "./Button";
 
 import "./TaskDetails.css";
 
 const TaskDetails = () => {
   const params = useParams()
-  // return the params we use in URL
+  // return the params that we are using at the URL
   const history = useNavigate();
   const handleBackButtonClick =() => {
     history(-1);
