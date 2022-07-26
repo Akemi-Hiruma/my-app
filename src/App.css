@@ -3,7 +3,8 @@
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
-  border: 2px solid salmon;
+  background-color: #252926;
+  border: 2px solid #D9A693;
   padding: 30px;
   border-radius: 8px;
 }
