@@ -1,5 +1,5 @@
 .task-container {
-  background-color: #444;
+  background-color: #5F7161;
   margin: 8px 0;
   padding: 15px 20px;
   display: flex;
@@ -20,9 +20,9 @@
 
 .remove-task-button,
 .view-task-details-button {
-  background-color: #444;
+  background-color: #5F7161;
   border: none;
   font-size: 24px;
-  color: salmon;
+  color: #D9A693;
   margin: 0 5px;
 }

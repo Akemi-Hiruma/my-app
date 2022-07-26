@@ -1,5 +1,5 @@
 .task-details-container {
-  background: #444;
+  background: #5F7161;
   margin: 15px 0;
   padding: 15px 20px;
   display: flex;
@@ -10,7 +10,7 @@
 
 .task-details-container h2 {
   margin-bottom: 5px;
-  color: salmon;
+  color: #D9A693;
 }
 
 .back-button-container {
